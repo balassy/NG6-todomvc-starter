@@ -44,6 +44,7 @@
     "style-loader": "^0.12.2",
     "supports-color": "^3.1.2",
     "typescript": "^1.8.10",
+    "typings": "^1.0.2",
     "webpack": "^1.12.11",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
@@ -52,6 +53,7 @@
   "scripts": {
     "test": "karma start",
     "test:e2e": "./node_modules/.bin/tsc && protractor protractor.conf.js",
+    "postinstall": "./node_modules/.bin/typings install"
   },
   "keywords": [
     "angular",
