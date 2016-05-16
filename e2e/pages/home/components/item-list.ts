@@ -1,4 +1,11 @@
+import ElementFinder = protractor.ElementFinder;
+import ElementArrayFinder = protractor.ElementArrayFinder;
+
 class ItemList {
+  private _containerElement: ElementFinder;
+  private _itemElements: ElementArrayFinder;
+  private _itemTextElements: ElementArrayFinder; 
+  
   constructor(hostElement) {
     this._containerElement = hostElement.element(by.css('div.todo-list'));
     this._itemElements = this._containerElement.all(by.css('todo-item'));

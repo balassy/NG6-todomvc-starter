@@ -1,7 +1,7 @@
 import HomePage from './pages/home';
 
 describe('Initial content', () => {
-  let homePage;
+  let homePage: HomePage;
   
   beforeAll(async () => {
     homePage = new HomePage();
@@ -11,35 +11,35 @@ describe('Initial content', () => {
   });
   
   it('should load with correct title', async () => {    
-    const actualTitle = await homePage.getTitle();
+    const actualTitle: string = await homePage.getTitle();
     expect(actualTitle).toEqual('TodoMVC based on NG6-starter by @AngularClass');
   });
   
   it('should load with correct header', async () => {    
-    const actualHeader = await homePage.getHeader();
+    const actualHeader: string = await homePage.getHeader();
     expect(actualHeader).toEqual('todos');
   });
   
   describe('New item box', () => {
     it('should be visible', async () => {
-      const isVisible = await homePage.newItemBox.isVisible();
+      const isVisible: boolean = await homePage.newItemBox.isVisible();
       expect(isVisible).toEqual(true);
     });
     
     it('should have correct placeholder', async () => {
-      const actualPlaceholderText = await homePage.newItemBox.getPlaceholderText();
+      const actualPlaceholderText: string = await homePage.newItemBox.getPlaceholderText();
       expect(actualPlaceholderText).toEqual('What needs to get done?');
     });
   });
   
   describe('Item list', () => {
     it('should be visible', async () => {
-      const isVisible = await homePage.itemList.isVisible();
+      const isVisible: boolean = await homePage.itemList.isVisible();
       expect(isVisible).toEqual(true);
     });
     
     it('should have zero items', async () => {
-      const actualCount = await homePage.itemList.getCount();
+      const actualCount: number = await homePage.itemList.getCount();
       expect(actualCount).toEqual(0);
     });
   });    
