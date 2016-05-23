@@ -1,11 +1,11 @@
 import HomePage from './pages/home';
 
 describe('Initial content', () => {
-  let homePage;
+  let homePage: HomePage;
   
   beforeAll(async () => {
     homePage = new HomePage();
-    
+
     console.log('Loading the Home page...');
     await homePage.load();
   });
