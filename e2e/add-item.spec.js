@@ -1,5 +1,5 @@
 import HomePage from './pages/home';
-import Chance from 'chance';
+import * as Chance from 'chance';
 
 describe('Adding new items', () => {
   const chance = new Chance();
