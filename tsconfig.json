@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "./ts-out"
+  },
+  "exclude": [
+    // Only the `e2e` folder is included.
+    "node_modules",
+    "src",
+    "ts-out",
+
+    // All files in the root folder are excluded.
+    "gulpfile.babel.js",
+    "karma.conf.js",
+    "protractor.conf.js",
+    "spec.bundle.js",
+    "webpack.config.js",
+    "webpack.dev.config.js",
+    "webpack.dist.config.js"
+  ]
+}
