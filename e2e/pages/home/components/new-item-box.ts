@@ -1,4 +1,9 @@
+import ElementFinder = protractor.ElementFinder;
+
 class NewItemBox {
+  private _containerElement: ElementFinder;
+  private _inputElement: ElementFinder;
+
   constructor(hostElement) {
     this._containerElement = hostElement.element(by.css('todo-text-input'));
     this._inputElement = this._containerElement.element(by.css('input.new-todo'));

@@ -1,7 +1,15 @@
+import ElementFinder = protractor.ElementFinder;
+
 import NewItemBox from './components/new-item-box';
 import ItemList from './components/item-list';
 
 class HomePage {
+  private _titleElement: ElementFinder;
+  private _containerElement: ElementFinder;
+  private _headerElement: ElementFinder;
+  private _newItemBox: NewItemBox;
+  private _itemList: ItemList;
+  
   constructor() {
     this._titleElement = element(by.css('title'));
     
