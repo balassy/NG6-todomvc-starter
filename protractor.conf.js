@@ -4,8 +4,8 @@ exports.config = {
   baseUrl: 'http://localhost:3000',
   suites: {
     all: [
-      './e2e/initial-content.spec.js',
-      './e2e/add-item.spec.js'
+      './ts-out/initial-content.spec.js',
+      './ts-out/add-item.spec.js'
     ]
   },
   suite: 'all',
@@ -13,7 +13,7 @@ exports.config = {
     browserName: 'chrome'
   },
   onPrepare: function onPrepare() {
-    require('babel-core/register');
+    // require('babel-core/register');
 
     var SpecReporter = require('jasmine-spec-reporter');
     jasmine.getEnv().addReporter(new SpecReporter({

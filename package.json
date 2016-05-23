@@ -52,7 +52,7 @@
   },
   "scripts": {
     "test": "karma start",
-    "test:e2e": "protractor protractor.conf.js",
+    "test:e2e": "./node_modules/.bin/tsc && protractor protractor.conf.js",
     "postinstall": "./node_modules/.bin/typings install"
   },
   "keywords": [
