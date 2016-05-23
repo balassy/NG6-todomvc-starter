@@ -3,8 +3,8 @@ import * as Chance from 'chance';
 
 describe('Adding new items', () => {
   const chance = new Chance();
-  let homePage;
-  let itemText;
+  let homePage: HomePage;
+  let itemText: string;
   
   beforeAll(async () => {
     homePage = new HomePage();
